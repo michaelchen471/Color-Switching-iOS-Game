@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Play View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GamePlayViewController" customModule="Tile_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="zet-Yb-h6f">
+                                <rect key="frame" x="87" y="144" width="200" height="225"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHf-i6-ai7">
+                                <rect key="frame" x="119" y="456" width="137" height="64"/>
+                                <color key="backgroundColor" red="0.84451909132053271" green="0.98001384972656369" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xUG-Fv-E6x" kind="show" id="Ohr-Eg-r0W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colored Tile Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoG-V7-h9E">
+                                <rect key="frame" x="57" y="97" width="261" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71031312463661433" green="0.90281552834183221" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zet-Yb-h6f" secondAttribute="trailing" constant="88" id="4ZO-xw-Z6I"/>
+                            <constraint firstItem="JHf-i6-ai7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="12:45" id="6yL-qm-Khy"/>
+                            <constraint firstItem="zet-Yb-h6f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="EmO-Cr-c0s"/>
+                            <constraint firstItem="OoG-V7-h9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="Heq-wP-Lhw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JHf-i6-ai7" secondAttribute="bottom" constant="174" id="WlK-LM-9qL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zet-Yb-h6f" secondAttribute="bottom" constant="298" id="d1c-XZ-wZS"/>
+                            <constraint firstItem="JHf-i6-ai7" firstAttribute="top" secondItem="zet-Yb-h6f" secondAttribute="bottom" constant="84" id="fmy-j1-Kxf"/>
+                            <constraint firstItem="zet-Yb-h6f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="i5v-ok-R8Q"/>
+                            <constraint firstItem="JHf-i6-ai7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kEg-o8-eqG"/>
+                            <constraint firstItem="OoG-V7-h9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="mcT-lt-9tg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="ViP-XG-ot4">
+            <objects>
+                <viewController storyboardIdentifier="gameOver" id="oF0-e4-ds5" customClass="GameOverViewController" customModule="Tile_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ORv-OV-oKe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FR-sl-1ba">
+                                <rect key="frame" x="61" y="162" width="253" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <color key="textColor" red="0.75811420311143374" green="0.15771910735053984" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc3-bE-CPw">
+                                <rect key="frame" x="165" y="310" width="45" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmj-9t-qQM">
+                                <rect key="frame" x="143" y="428" width="89" height="69"/>
+                                <color key="backgroundColor" red="1" green="0.81525754598246269" blue="0.90909811528416384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="q3r-97-4vO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85310818812207845" green="0.79264818833103901" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Wmj-9t-qQM" firstAttribute="top" secondItem="vc3-bE-CPw" secondAttribute="bottom" constant="99" id="15c-Hq-drP"/>
+                            <constraint firstItem="Wmj-9t-qQM" firstAttribute="height" secondItem="ORv-OV-oKe" secondAttribute="height" multiplier="50:667" id="Dua-IJ-vt3"/>
+                            <constraint firstItem="Wmj-9t-qQM" firstAttribute="centerX" secondItem="OTh-2D-gDO" secondAttribute="centerX" id="E63-mw-aPd"/>
+                            <constraint firstItem="3FR-sl-1ba" firstAttribute="centerX" secondItem="OTh-2D-gDO" secondAttribute="centerX" id="KwT-Wv-Hdu"/>
+                            <constraint firstItem="3FR-sl-1ba" firstAttribute="top" secondItem="OTh-2D-gDO" secondAttribute="top" constant="142" id="hhE-Mq-dZZ"/>
+                            <constraint firstItem="Wmj-9t-qQM" firstAttribute="width" secondItem="ORv-OV-oKe" secondAttribute="height" multiplier="100:667" id="jhz-kY-HDf"/>
+                            <constraint firstItem="vc3-bE-CPw" firstAttribute="top" secondItem="3FR-sl-1ba" secondAttribute="bottom" constant="93" id="rZ7-32-Aqn"/>
+                            <constraint firstItem="vc3-bE-CPw" firstAttribute="centerX" secondItem="OTh-2D-gDO" secondAttribute="centerX" id="u13-9q-JEf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OTh-2D-gDO"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="vc3-bE-CPw" id="oaX-5b-Xfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzw-SF-ay2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="133.5832083958021"/>
+        </scene>
+        <!--Pause Screen View Controller-->
+        <scene sceneID="xAb-jh-E3y">
+            <objects>
+                <viewController id="xUG-Fv-E6x" customClass="PauseScreenViewController" customModule="Tile_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="toz-OD-tn2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5h2-lf-YVM">
+                                <rect key="frame" x="147" y="144" width="81" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa8-ej-uzH">
+                                <rect key="frame" x="47" y="44" width="70" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3s-ne-Ae4">
+                                <rect key="frame" x="294" y="37" width="51" height="51"/>
+                                <state key="normal" image="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButton:" destination="xUG-Fv-E6x" eventType="touchUpInside" id="eEm-10-AfQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kF5-dQ-0xt">
+                                <rect key="frame" x="137" y="374" width="100" height="100"/>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="xUG-Fv-E6x" eventType="touchUpInside" id="Yhs-OK-2KR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shl-pv-Qla">
+                                <rect key="frame" x="88" y="495" width="60" height="60"/>
+                                <state key="normal" image="House"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="XiE-Ef-Dv2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAB-7S-Of7">
+                                <rect key="frame" x="218" y="495" width="60" height="60"/>
+                                <state key="normal" image="Restart"/>
+                                <connections>
+                                    <action selector="restart:" destination="xUG-Fv-E6x" eventType="touchUpInside" id="uCa-IQ-aMz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90067274143163234" blue="0.66668916360614205" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kF5-dQ-0xt" firstAttribute="leading" secondItem="Shl-pv-Qla" secondAttribute="trailing" constant="-11" id="41P-zk-AAK"/>
+                            <constraint firstItem="VAB-7S-Of7" firstAttribute="leading" secondItem="kF5-dQ-0xt" secondAttribute="trailing" constant="-19" id="9Dv-LN-i1X"/>
+                            <constraint firstItem="L3s-ne-Ae4" firstAttribute="top" secondItem="Hj4-Jz-y20" secondAttribute="top" constant="17" id="DZm-EQ-pKh"/>
+                            <constraint firstItem="fa8-ej-uzH" firstAttribute="leading" secondItem="Hj4-Jz-y20" secondAttribute="leading" constant="47" id="H7S-Ng-JVw"/>
+                            <constraint firstItem="5h2-lf-YVM" firstAttribute="centerX" secondItem="Hj4-Jz-y20" secondAttribute="centerX" id="Jr9-3f-l74"/>
+                            <constraint firstItem="VAB-7S-Of7" firstAttribute="top" secondItem="kF5-dQ-0xt" secondAttribute="bottom" constant="21" id="MLp-vM-urD"/>
+                            <constraint firstItem="5h2-lf-YVM" firstAttribute="top" secondItem="Hj4-Jz-y20" secondAttribute="top" constant="124" id="MjF-EL-YZE"/>
+                            <constraint firstItem="Shl-pv-Qla" firstAttribute="top" secondItem="kF5-dQ-0xt" secondAttribute="bottom" constant="21" id="Y14-No-LCL"/>
+                            <constraint firstItem="Hj4-Jz-y20" firstAttribute="trailing" secondItem="L3s-ne-Ae4" secondAttribute="trailing" constant="30" id="bxu-li-dgZ"/>
+                            <constraint firstItem="fa8-ej-uzH" firstAttribute="top" secondItem="Hj4-Jz-y20" secondAttribute="top" constant="24" id="dzi-qm-n3g"/>
+                            <constraint firstItem="kF5-dQ-0xt" firstAttribute="centerX" secondItem="Hj4-Jz-y20" secondAttribute="centerX" id="lF0-aU-Y0H"/>
+                            <constraint firstItem="kF5-dQ-0xt" firstAttribute="top" secondItem="5h2-lf-YVM" secondAttribute="bottom" constant="141" id="vWF-AY-WuX"/>
+                            <constraint firstItem="VAB-7S-Of7" firstAttribute="top" secondItem="kF5-dQ-0xt" secondAttribute="bottom" constant="21" id="x3V-9i-UT5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hj4-Jz-y20"/>
+                    </view>
+                    <connections>
+                        <outlet property="TimeKeep" destination="5h2-lf-YVM" id="XhS-35-hk2"/>
+                        <outlet property="homeButton" destination="Shl-pv-Qla" id="FUQ-2f-Heo"/>
+                        <outlet property="playButton" destination="kF5-dQ-0xt" id="XKQ-NQ-8rZ"/>
+                        <outlet property="restartButton" destination="VAB-7S-Of7" id="UR7-Jf-jM1"/>
+                        <outlet property="score" destination="fa8-ej-uzH" id="MdP-dE-xKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMw-tL-GIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896.8" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="House" width="400.69564819335938" height="400.69564819335938"/>
+        <image name="Image" width="225" height="225"/>
+        <image name="Pause" width="46.545455932617188" height="46.545455932617188"/>
+        <image name="Play" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="Restart" width="400.69564819335938" height="400.69564819335938"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XiE-Ef-Dv2"/>
+    </inferredMetricsTieBreakers>
+</document>
